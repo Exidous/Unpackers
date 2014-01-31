@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Help TOC</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+html,body {
+	margin: 0; padding: 0; 
+	height: 100%;
+	min-height:100%;
+	background-color: rgb(233,232,220);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-style: normal;
+	font-weight: normal;
+	color: black;
+}
+
+p {
+	font-size:70%;
+	padding: 3px;
+	margin:0; 
+}
+
+.tabs {
+	list-style: none;
+	padding: 0;
+	margin: 1px 0px 0px 0px;
+	font-size:70%;
+	display: block;
+	width:100%;
+} 
+
+.tabs li {
+	float: left;
+	display: block;
+	padding: 2px 4px 2px 3px;
+	margin: 0px;
+	border-style: none none solid none;
+	border-width: 1px 1px 1px 1px;
+	border-color: rgb(172,168,153);
+	background-color: rgb(233,232,220);
+}
+
+li.active-button {
+	border-style: solid solid none solid;
+	background-color: rgb(252,252,254);
+}
+
+#index {
+    background-image: url(msdn2/help_index.gif);
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    background-position: left center;
+    height:1.5em;
+    margin: 0px;
+    display: block;
+    float: left;
+} 
+
+#contents {
+    background-image: url(msdn2/help_contents.gif);
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    background-position: left center;
+    height:1.5em;
+    margin: 0px;
+    display: block;
+    float: left;
+} 
+
+#search {
+    background-image: url(msdn2/help_search.gif);
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    background-position: left center;
+    height:1.5em;
+    margin: 0px;
+    display: block;
+    float: left;
+} 
+
+#empty {
+    height:1.5em;
+    margin: 0px;
+    display: block;
+} 
+
+.space-line {
+	background-color: rgb(252,252,254);
+	height:2px;
+	line-height: 1px;
+	font-size: 1px;
+	padding: 0;
+	margin: 0;
+	clear:both;
+}
+
+.tabs li a{
+  display: block;
+	float: left;
+}
+
+a:link, a:visited	{
+	color: #716f64;
+	text-decoration: none;
+}
+
+a:hover	{
+	color: #716f64;
+	text-decoration: underline;
+}
+
+.box-top {  
+	border-style: solid solid solid solid;
+	border-color: rgb(172,168,153);
+	border-width: 1px 1px 0px 1px;
+	margin:0;
+	padding:0;
+}
+
+.box-rest {  
+	border-style: solid solid solid solid;
+	border-color: rgb(172,168,153);
+	border-width: 0px 1px 1px 1px;
+	margin:0;
+	padding:0;
+	height:85%;
+	min-height:85%;
+}
+
+-->
+</style>
+
+<script type="text/javascript">
+window.onload = resizeBox;
+window.onresize = resizeBox;
+
+var alreadyResizing = false;
+function resizeBox() {
+  if (!alreadyResizing) {
+    alreadyResizing = true;
+		var box = document.getElementById("main-box");
+		var ifrm = document.getElementById("main-iframe");
+		var h = document.body.clientHeight - box.offsetTop - 2;
+		box.style.height = h + "px";
+		ifrm.style.height = h -3 + "px";
+	}
+	alreadyResizing = false;
+}
+
+function expandLinkInToc(url) {
+	var ifrm = frames[0];
+	if (ifrm.expandLinkInToc === undefined) {
+		// iframe is not loaded yet, schedule the operation when it's loaded
+		ifrm.onload = function(){
+			var ifrmLoaded = frames[0]; 
+			return ifrmLoaded.expandLinkInToc(url);
+		}
+	} else {
+		return ifrm.expandLinkInToc(url);
+	}
+}
+
+</script>
+</head>
+
+<body>
+	<div>
+		<ul class="tabs">
+			<li class="active-button">
+				<div id="contents">
+					Contents
+				</div></li>
+			<li>
+				<a id="index" title="Show Index" href="switch2--.html">Index</a></li>
+			<li>
+				<a id="search" title="Show Search" href="switch3--.html">Search</a></li>
+			<li style="float:none;">
+				<div id="empty">
+					&nbsp;
+				</div></li>
+		</ul>
+	</div>
+	<div class="space-line">
+		&nbsp;
+	</div>
+	<div class="box-top"></div>
+	<div id="main-box" class="box-rest">
+	  <iframe id="main-iframe" src="help_toc--.html" frameborder="0" scrolling="auto" width="100%" height="100%"></iframe>
+	</div>
+</body>
+</html>

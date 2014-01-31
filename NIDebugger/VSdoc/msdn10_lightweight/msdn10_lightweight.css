@@ -1,0 +1,464 @@
+body {
+	margin:0;
+	font-family:'Segoe UI',Verdana,Arial;
+	font-size:.813em;
+	color:#000;
+	font-style:normal;
+	padding-right:0;
+	padding-left:0;
+	word-wrap:break-word
+}
+
+div#topic {
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-bottom: 13px;
+	/* Preload hidden image. Otherwise it doesn't show in CHM + IE9 */
+	background: url(collapsed.png) no-repeat -9999px -9999px;
+}
+
+div#mainSection {
+}
+
+div#mainBody {
+	margin-top: 10px;
+	padding-bottom: 20px;
+}
+
+div#mainBody p, div#mainBody ol, div#mainBody ul, div#mainBody dl
+{
+	padding-right: 5px;
+}
+
+div#header {
+	background-color: #FFFFFF;
+	padding-top:	0px;
+	padding-bottom:	0px;
+	padding-left:	0px;
+	padding-right:	0px;
+	width:	100%;
+}
+
+div#runningHeaderText
+{
+	color: #8C8C8C;
+	font-size: 90%;
+	padding-top:2px;
+}
+
+#header .title {
+	font-family: 'Segoe UI',Verdana,Arial;
+	font-size: 1.769em;
+	color: #3f529c;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#headerLinks {
+	color: #0000ff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-right: 20px;
+	padding-bottom: 2px;
+	padding-top: 0px;
+	padding-left: 0px;
+	font-size: 90%;
+}
+
+div.section_heading {
+	margin-top: 19px;
+	margin-bottom: 14px;
+}
+
+div.section_heading span {
+	font-family: 'Segoe UI',Verdana,Arial;
+	font-size: 1.538em;
+	color: #3f529c;
+	font-weight: bold;
+	float: left;
+}
+
+hr {
+	border: 1px #e5e5e5 solid;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	margin-left: 4px;
+	color:#e5e5e5;
+}
+
+div.section_heading div {
+	padding-top: 12px;
+}
+
+div.section_container div.section_heading a {
+	background: url(expanded.png) no-repeat scroll 0px 14px;
+	padding-left: 15px;
+	text-decoration: none;
+	outline: none;
+	color: #3f529c;
+}
+
+div.section_container.collapsed div.section_heading a {
+	background: url(collapsed.png) no-repeat scroll 0px 11px;
+	padding-left: 13px;
+}
+
+div.section
+{
+	clear: both;
+	margin-left:0px;
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-right:	15px;
+	padding-left: 15px;
+}
+
+div.section_container.collapsed div.section {
+	display: none;
+}
+
+div#footer
+{
+	font-size: 90%;
+	margin-top:	0px;
+	margin-bottom:	0px;
+	margin-left:	0px;
+	margin-right:	0px;
+	padding-top:	2px;
+	padding-bottom:	6px;
+	padding-left:	5px;
+	padding-right:	2px;
+	border-top: solid 1px #bbb;
+	background: url(footer_grad.png) repeat-x scroll top;
+}
+
+.subHeading {
+	font-weight:	bold;
+	margin-bottom:	6px;
+	margin-top: 2px;
+}
+
+h4.subHeading {
+	font-family: 'Segoe UI',Verdana,Arial;
+	font-size: 1em;
+	color: #3f529c;
+	font-weight: bold;
+}
+
+p {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+/* Tables in main text */
+div#mainSection table {
+	border: 1px #bbbbbb solid;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-collapse: collapse;
+}
+
+div#mainSection table tr {
+	vertical-align: top;
+}
+
+div#mainSection table th {
+	border: 1px #bbbbbb solid;
+	background-color: #e5e5e5;
+	padding: 4px;
+	text-align: left;
+	height: 21px;
+	font-family: 'Segoe UI',Verdana,Arial;
+	font-size: 1.077em;
+	color: #000000;
+	font-style: normal;
+	font-weight: normal;	
+}
+
+table.memberListTable tr th:first-child {	/*icon column*/
+	width: 75px;
+}
+
+div#mainSection table td {
+	border: 1px #bbbbbb solid;
+	background-color: #ffffff;
+	line-height: 140%;
+	padding: 4px;
+	margin: 1px;
+}
+
+div#mainSection table td.imageCell {
+	white-space: nowrap;
+}
+
+a {
+	color: #1364c4;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #960bb4;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+span.parameter {
+}
+
+/* diagrams */
+.class-diagram img {
+	border: none;
+}
+
+
+/* Code snippets */
+.codeSnippetTabs {
+	width: auto;
+	height: 19px;
+	padding: 0px;
+	border: 0px #ffffff none;
+}
+
+.codeSnippetTab {
+	height: 19px;
+	float: left;
+	width: auto;
+	border-top: 1px solid #bbbbbb;
+	border-bottom: 2px solid #d0d2d2;
+	border-left: 1px solid #929292;
+	padding: 0px 8px 0px 8px;
+	background-color: #eff5ff;
+}
+
+.csFirstTab {
+	border-left: 0px solid #929292;
+}
+
+.csActiveTab {
+	border-bottom-color: #ffffff;
+	background-color: #ffffff;
+}
+
+.csNaTab {
+	display: none;
+}
+
+.csNaTab.csActiveTab {
+	display: block;
+}
+
+
+.codeSnippetTabLeftCorner {
+	background: url(code_tab_top_left.png) no-repeat scroll left top;
+	height: 20px;
+	width: 6px;
+	padding: 0px;
+	border: 0px #ffffff none;
+	border-bottom: 2px solid #d0d2d2;
+	float: left;
+}
+
+.codeSnippetTabLeftCornerActive {
+	background: url(code_tab_top_left_active.png) no-repeat scroll left top;
+	height: 22px;
+	width: 6px;
+	padding: 0px;
+	border: 0px #ffffff none;
+	float: left;
+}
+
+.codeSnippetTabRightCorner {
+	background: url(code_tab_top_right.png) no-repeat scroll right top;
+	height: 20px;
+	width: 6px;
+	padding: 0px;
+	border: 0px #ffffff none;
+	border-bottom: 2px solid #d0d2d2;
+	float: left;
+}
+
+.codeSnippetTabRightCornerActive {
+	background: url(code_tab_top_right_active.png) no-repeat scroll right top;
+	height: 22px;
+	width: 6px;
+	padding: 0px;
+	border: 0px #ffffff none;
+	float: left;
+}
+
+.codeSnippetTabs a {
+	font-weight: bold;
+}
+
+.codeSnippetTabs .csNaTab a {
+	font-weight: normal;
+}
+
+.codeSnippetTabs a, .codeSnippetTabs a:link, .codeSnippetTabs a:visited, .codeSnippetTabs a:active {
+	color: #1364c4;
+	text-decoration: none;
+}
+
+.codeSnippetTabs a:hover {
+	color: #e66a38;
+}
+
+.codeSnippetTabs .csActiveTab a {
+	color: #e66a38;
+}
+
+.codeSnippetCodeCollection {
+	border-top:solid 3px #e5e5e5;
+	border-right:solid 1px #e5e5e5;
+	border-bottom:solid 3px #e5e5e5;
+	border-left:solid 1px #bbb;
+	margin-bottom: 12px;
+	/*position: relative;
+	top: -3px;*/
+}
+
+.codeSnippetToolbar {
+	float:right;
+	top:-10px;
+	position:relative;
+	background-color:#fff;
+	padding-left:4px;
+	padding-right:4px;
+	width:auto;
+	height:0
+}
+	
+.codeSnippetToolbar a:link, .codeSnippetToolbar a:visited, .codeSnippetToolbar a:active {
+	margin-left: 5px;
+	margin-right: 5px;
+	text-decoration: none;
+	color: #1364c4;
+	background-color:#fff;
+	font-family: 'Segoe UI',Verdana,Arial;
+	font-size: 10pt;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.codeSnippetToolbar a:hover {
+	margin-left: 5px;
+	margin-right: 5px;
+	text-decoration: none;
+	color: #e66a38;
+	font-family: 'Segoe UI',Verdana,Arial;
+	font-size: 10pt;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.codeSnippetCode {
+	padding-right: 21px;
+	padding-left: 21px;
+	margin: 0px;
+}
+
+.codeSnippetCode pre {
+	padding: 5px;
+	margin: 0px;
+	font-family: Consolas,Courier,monospace;
+	font-style: normal;
+	font-weight: normal;
+	word-wrap: break-word;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+/* Code snippets end */
+
+
+
+
+
+
+/* MSDN stuff */
+
+
+dl
+{
+	margin-top:	15px;
+	margin-bottom:5px;
+	padding-left:	1px;
+}
+
+
+dd
+{
+	margin-left:	0px;
+	padding-left: 2em;
+}
+
+ul
+{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left: 17px;
+	list-style-type: disc;
+}
+
+ul ul
+{
+	margin-bottom: 4px;
+	margin-left: 17px;
+	margin-top: 3px;
+	list-style-type: disc;
+}
+
+ol
+{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left: 28px;
+	list-style-type: decimal;
+}
+
+ol ol
+{
+	margin-bottom: 4px;
+	margin-left: 28px;
+	margin-top: 3px;
+	list-style-type: lower-alpha;
+}
+
+li
+{
+	margin-top:-2px;
+	margin-bottom: 3px;
+}
+
+
+dd p
+{
+	margin-top:4px;
+	margin-bottom:4px;
+}
+div.tableSection p
+{
+	margin-top:1px;
+	margin-bottom:4px;
+}	
+li p
+{
+	margin-top:2px;
+	margin-bottom:2px;
+}
+div.section dl
+{
+	margin-top:8px;
+	margin-bottom:1px;
+	padding-left:1px;
+}
+div.section dd p
+{
+	margin-top:2px;
+	margin-bottom:2px;
+}

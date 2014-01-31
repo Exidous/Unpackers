@@ -1,0 +1,1009 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>Menu</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+<style>
+html { font-family:sans-serif; background-color:#ffffff; font-size:75%;}
+a { text-decoration:none; color:rgb(0,51,102) }
+.header a { color:#000!important }
+.item { border:solid 0px #000; padding:0.25em; margin-left:1em }
+.header, .leaf { cursor:pointer; padding-left:19px; min-height:18px; line-height:18px; white-space:nowrap;}
+.closed { background:url(bookC.gif) no-repeat }
+.open { background:url(bookE.gif) no-repeat }
+.leaf { background:url(leaf.gif) no-repeat }
+</style>
+
+<script>
+function toggle(idsub,elhead) {
+    var elsub = document.getElementById(idsub);
+    if(elsub.style.display=="block")
+        elsub.style.display = "none";
+    else
+        elsub.style.display="block";
+        
+    if(elhead.className=="header open")
+        elhead.className = "header closed";
+    else
+        elhead.className = "header open";
+}
+
+function expandLinkInToc(url) {
+	var link = findLink(url);
+	//alert(link);
+	//alert(link.innerHTML);
+	if(!isElementVisible(link)) {
+		expandElementAndParents(link);
+	}
+	link.scrollIntoView(true);
+	link.focus();
+}
+
+function expandElementAndParents(elm) {
+	if(elm.style) {
+		if(elm.style.display=="none") {
+			//elm is container with subtopics
+			elm.style.display="block";
+			// process also chapter header
+			var id = elm.getAttribute("id");
+			id = id.substring(1);
+			var elHead = document.getElementById(id);
+			if(elHead.className=="header closed") {
+				elHead.className = "header open";
+			}
+		}
+	}
+	// process parents
+	if (elm.parentNode) {
+		expandElementAndParents(elm.parentNode);
+	}
+}
+
+function findLink(url) {
+	var links = document.links;
+	var i;
+	for (i=0; i<links.length; i++) {
+		if (links[i].href == url) {
+			return links[i];
+		}		
+	}
+	return null;
+} 
+
+function isElementVisible(elm) {
+	if(elm.style) {
+		if(elm.style.display == "none") {
+			return false;
+		}
+	}
+	if (elm.parentNode) {
+		return isElementVisible(elm.parentNode);
+	} else {
+		return true;
+	}
+}
+</script>
+
+</head>
+
+<body>
+    
+						 		<div id="1" class="header closed" onclick="toggle('c1',this)">
+   
+  		<a href="topic_0000000000000044.html" target="vbdocright">NIDebugger Reference</a>
+ 
+		</div>
+     <div id="c1" class="item" style="display:none">
+		
+     
+
+       <div id="2" class="header closed" onclick="toggle('c2',this)">
+    <a href="topic_0000000000000000.html" target="vbdocright">LDASM_Sharp Namespace</a>
+    </div>
+    <div id="c2" class="item" style="display:none">
+		
+
+						    <div id="3" class="header closed" onclick="toggle('c3',this)">
+    <a href="topic_0000000000000001.html" target="vbdocright">LDASM Class</a>
+    </div>
+    <div id="c3" class="item" style="display:none">
+		
+ 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="leaf"><a href="topic_0000000000000001_members--.html" target="vbdocright">LDASM Members</a></div>
+
+
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		    <div id="4" class="header closed" onclick="toggle('c4',this)">
+    <a href="topic_0000000000000001_methods--.html" target="vbdocright">Methods</a>
+    </div>
+    <div id="c4" class="item" style="display:none">
+		
+						
+						
+						
+						
+						
+						  <div class="leaf"><a href="topic_0000000000000002.html" target="vbdocright">ldasm Method</a></div>
+
+			</div>
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+		
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+       <div id="5" class="header closed" onclick="toggle('c5',this)">
+    <a href="topic_0000000000000003.html" target="vbdocright">NonIntrusive Namespace</a>
+    </div>
+    <div id="c5" class="item" style="display:none">
+		
+
+						    <div id="6" class="header closed" onclick="toggle('c6',this)">
+    <a href="topic_0000000000000037.html" target="vbdocright">NIBreakPoint Class</a>
+    </div>
+    <div id="c6" class="item" style="display:none">
+		
+ 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="leaf"><a href="topic_0000000000000037_members--.html" target="vbdocright">NIBreakPoint Members</a></div>
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		    <div id="7" class="header closed" onclick="toggle('c7',this)">
+    <a href="topic_0000000000000037_props--.html" target="vbdocright">Properties</a>
+    </div>
+    <div id="c7" class="item" style="display:none">
+		
+						  <div class="leaf"><a href="topic_0000000000000038.html" target="vbdocright">bpAddress Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000039.html" target="vbdocright">originalBytes Property</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000003A.html" target="vbdocright">threadId Property</a></div>
+
+			</div>
+		
+
+
+		    <div id="8" class="header closed" onclick="toggle('c8',this)">
+    <a href="topic_0000000000000037_methods--.html" target="vbdocright">Methods</a>
+    </div>
+    <div id="c8" class="item" style="display:none">
+		
+						
+						
+						
+						
+						
+			</div>
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+				    <div id="9" class="header closed" onclick="toggle('c9',this)">
+    <a href="topic_000000000000002C.html" target="vbdocright">NIContext Class</a>
+    </div>
+    <div id="c9" class="item" style="display:none">
+		
+ 		
+
+
+
+
+
+
+
+
+
+
+
+<div class="leaf"><a href="topic_000000000000002C_members--.html" target="vbdocright">NIContext Members</a></div>
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+						  <div class="leaf"><a href="topic_0000000000000030.html" target="vbdocright">NIContext Constructor </a></div>
+
+		
+		
+
+
+		
+
+
+		    <div id="10" class="header closed" onclick="toggle('c10',this)">
+    <a href="topic_000000000000002C_methods--.html" target="vbdocright">Methods</a>
+    </div>
+    <div id="c10" class="item" style="display:none">
+		
+						
+						  <div class="leaf"><a href="topic_000000000000002D.html" target="vbdocright">GetFlag Method</a></div>
+
+						
+						
+						
+						  <div class="leaf"><a href="topic_000000000000002E.html" target="vbdocright">SetFlag Method</a></div>
+
+						
+						  <div class="leaf"><a href="topic_000000000000002F.html" target="vbdocright">ToWin32Context Method</a></div>
+
+			</div>
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+				    <div id="11" class="header closed" onclick="toggle('c11',this)">
+    <a href="topic_0000000000000004.html" target="vbdocright">NIDebugger Class</a>
+    </div>
+    <div id="c11" class="item" style="display:none">
+		
+ 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="leaf"><a href="topic_0000000000000004_members--.html" target="vbdocright">NIDebugger Members</a></div>
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		    <div id="12" class="header closed" onclick="toggle('c12',this)">
+    <a href="topic_0000000000000004_props--.html" target="vbdocright">Properties</a>
+    </div>
+    <div id="c12" class="item" style="display:none">
+		
+						  <div class="leaf"><a href="topic_0000000000000006.html" target="vbdocright">Context Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000005.html" target="vbdocright">Process Property</a></div>
+
+			</div>
+		
+
+
+		    <div id="13" class="header closed" onclick="toggle('c13',this)">
+    <a href="topic_0000000000000004_methods--.html" target="vbdocright">Methods</a>
+    </div>
+    <div id="c13" class="item" style="display:none">
+		
+						  <div class="leaf"><a href="topic_0000000000000019.html" target="vbdocright">AllocateMemory Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000020.html" target="vbdocright">ClearBreakpoint Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000026.html" target="vbdocright">ClearProcBP Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000001C.html" target="vbdocright">Continue Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000001E.html" target="vbdocright">Detach Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000017.html" target="vbdocright">DumpProcess Method</a></div>
+
+						
+						  <div class="leaf"><a href="topic_000000000000001B.html" target="vbdocright">Execute Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000001A.html" target="vbdocright">FindProcAddress Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000007.html" target="vbdocright">GetFlag Method</a></div>
+
+						
+						  <div class="leaf"><a href="topic_0000000000000021.html" target="vbdocright">GetInstrLength Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000022.html" target="vbdocright">GetInstrOpcodes Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000009.html" target="vbdocright">GetRegister Method</a></div>
+
+						
+						  <div class="leaf"><a href="topic_000000000000002A.html" target="vbdocright">If Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000000D.html" target="vbdocright">InjectASM Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000018.html" target="vbdocright">InsertHook Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000013.html" target="vbdocright">ReadDWORD Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000000C.html" target="vbdocright">ReadData Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000015.html" target="vbdocright">ReadStackValue Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000012.html" target="vbdocright">ReadString Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000000B.html" target="vbdocright">ReadWORD Method</a></div>
+
+						
+						  <div class="leaf"><a href="topic_000000000000000F.html" target="vbdocright">SearchMemory Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000001F.html" target="vbdocright">SetBreakpoint Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000008.html" target="vbdocright">SetFlag Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000025.html" target="vbdocright">SetProcBP Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000000A.html" target="vbdocright">SetRegister Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000023_overloads--.html" target="vbdocright">SingleStep Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000001D.html" target="vbdocright">Terminate Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000029.html" target="vbdocright">Times Method</a></div>
+
+						
+						  <div class="leaf"><a href="topic_0000000000000028.html" target="vbdocright">Until Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000027.html" target="vbdocright">While Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000014.html" target="vbdocright">WriteDWORD Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000010.html" target="vbdocright">WriteData Method</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000000E.html" target="vbdocright">WriteHexString Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000016.html" target="vbdocright">WriteStackValue Method</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000011.html" target="vbdocright">WriteString Method</a></div>
+
+			</div>
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+				    <div id="14" class="header closed" onclick="toggle('c14',this)">
+    <a href="topic_000000000000002B.html" target="vbdocright">NIDumpOptions Class</a>
+    </div>
+    <div id="c14" class="item" style="display:none">
+		
+ 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="leaf"><a href="topic_000000000000002B_members--.html" target="vbdocright">NIDumpOptions Members</a></div>
+
+
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		    <div id="15" class="header closed" onclick="toggle('c15',this)">
+    <a href="topic_000000000000002B_methods--.html" target="vbdocright">Methods</a>
+    </div>
+    <div id="c15" class="item" style="display:none">
+		
+						
+						
+						
+						
+						
+			</div>
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+				    <div id="16" class="header closed" onclick="toggle('c16',this)">
+    <a href="topic_000000000000003B.html" target="vbdocright">NISearchOptions Class</a>
+    </div>
+    <div id="c16" class="item" style="display:none">
+		
+ 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="leaf"><a href="topic_000000000000003B_members--.html" target="vbdocright">NISearchOptions Members</a></div>
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		    <div id="17" class="header closed" onclick="toggle('c17',this)">
+    <a href="topic_000000000000003B_props--.html" target="vbdocright">Properties</a>
+    </div>
+    <div id="c17" class="item" style="display:none">
+		
+						  <div class="leaf"><a href="topic_000000000000003E.html" target="vbdocright">ByteMask Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000040.html" target="vbdocright">EndAddress Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000041.html" target="vbdocright">MaxOccurs Property</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000003D.html" target="vbdocright">SearchBytes Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000042.html" target="vbdocright">SearchImage Property</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000003C.html" target="vbdocright">SearchString Property</a></div>
+
+						  <div class="leaf"><a href="topic_000000000000003F.html" target="vbdocright">StartAddress Property</a></div>
+
+			</div>
+		
+
+
+		    <div id="18" class="header closed" onclick="toggle('c18',this)">
+    <a href="topic_000000000000003B_methods--.html" target="vbdocright">Methods</a>
+    </div>
+    <div id="c18" class="item" style="display:none">
+		
+						
+						
+						
+						
+						
+			</div>
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+				    <div id="19" class="header closed" onclick="toggle('c19',this)">
+    <a href="topic_0000000000000031.html" target="vbdocright">NIStartupOptions Class</a>
+    </div>
+    <div id="c19" class="item" style="display:none">
+		
+ 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="leaf"><a href="topic_0000000000000031_members--.html" target="vbdocright">NIStartupOptions Members</a></div>
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		    <div id="20" class="header closed" onclick="toggle('c20',this)">
+    <a href="topic_0000000000000031_props--.html" target="vbdocright">Properties</a>
+    </div>
+    <div id="c20" class="item" style="display:none">
+		
+						  <div class="leaf"><a href="topic_0000000000000033.html" target="vbdocright">commandLine Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000032.html" target="vbdocright">executable Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000036.html" target="vbdocright">incrementTickCount Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000035.html" target="vbdocright">patchTickCount Property</a></div>
+
+						  <div class="leaf"><a href="topic_0000000000000034.html" target="vbdocright">resumeOnCreate Property</a></div>
+
+			</div>
+		
+
+
+		    <div id="21" class="header closed" onclick="toggle('c21',this)">
+    <a href="topic_0000000000000031_methods--.html" target="vbdocright">Methods</a>
+    </div>
+    <div id="c21" class="item" style="display:none">
+		
+						
+						
+						
+						
+						
+			</div>
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+				    <div id="22" class="header closed" onclick="toggle('c22',this)">
+    <a href="topic_0000000000000043.html" target="vbdocright">Win32 Class</a>
+    </div>
+    <div id="c22" class="item" style="display:none">
+		
+ 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="leaf"><a href="topic_0000000000000043_members--.html" target="vbdocright">Win32 Members</a></div>
+
+
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		    <div id="23" class="header closed" onclick="toggle('c23',this)">
+    <a href="topic_0000000000000043_methods--.html" target="vbdocright">Methods</a>
+    </div>
+    <div id="c23" class="item" style="display:none">
+		
+						
+						
+						
+						
+						
+			</div>
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+		
+		
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+		
+
+
+</div>
+
+
+ 
+
+  
+		</div>
+ 
+
+
+
+		
+		
+</body>
+</html>

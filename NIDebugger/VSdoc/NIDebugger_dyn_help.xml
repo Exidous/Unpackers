@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="NIDebugger" Title="NIDebugger Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.AllocateMemory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000019.html" LinkGroup="NIDebugger">AllocateMemory Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NISearchOptions.ByteMask" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000003E.html" LinkGroup="NIDebugger">ByteMask Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.ClearBreakpoint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000020.html" LinkGroup="NIDebugger">ClearBreakpoint Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.ClearProcBP" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000026.html" LinkGroup="NIDebugger">ClearProcBP Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.Context" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000006.html" LinkGroup="NIDebugger">Context Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.Continue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000001C.html" LinkGroup="NIDebugger">Continue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.Detach" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000001E.html" LinkGroup="NIDebugger">Detach Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.DumpProcess" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000017.html" LinkGroup="NIDebugger">DumpProcess Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NISearchOptions.EndAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000040.html" LinkGroup="NIDebugger">EndAddress Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000001B.html" LinkGroup="NIDebugger">Execute Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.FindProcAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000001A.html" LinkGroup="NIDebugger">FindProcAddress Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIContext.GetFlag" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000002D.html" LinkGroup="NIDebugger">GetFlag Method {NonIntrusive.NIContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.GetFlag" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000007.html" LinkGroup="NIDebugger">GetFlag Method {NonIntrusive.NIDebugger}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.GetInstrLength" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000021.html" LinkGroup="NIDebugger">GetInstrLength Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.GetInstrOpcodes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000022.html" LinkGroup="NIDebugger">GetInstrOpcodes Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.GetRegister" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000009.html" LinkGroup="NIDebugger">GetRegister Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.If" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000002A.html" LinkGroup="NIDebugger">If Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.InjectASM" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000000D.html" LinkGroup="NIDebugger">InjectASM Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.InsertHook" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000018.html" LinkGroup="NIDebugger">InsertHook Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="LDASM_Sharp.LDASM" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000001.html" LinkGroup="NIDebugger">LDASM Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="LDASM_Sharp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000000.html" LinkGroup="NIDebugger">LDASM_Sharp Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NISearchOptions.MaxOccurs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000041.html" LinkGroup="NIDebugger">MaxOccurs Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIBreakPoint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000037.html" LinkGroup="NIDebugger">NIBreakPoint Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIContext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000002C.html" LinkGroup="NIDebugger">NIContext Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIContext.NIContext" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000030.html" LinkGroup="NIDebugger">NIContext Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000004.html" LinkGroup="NIDebugger">NIDebugger Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NIDebugger Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000044.html" LinkGroup="NIDebugger">NIDebugger Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDumpOptions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000002B.html" LinkGroup="NIDebugger">NIDumpOptions Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NISearchOptions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000003B.html" LinkGroup="NIDebugger">NISearchOptions Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIStartupOptions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000031.html" LinkGroup="NIDebugger">NIStartupOptions Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000003.html" LinkGroup="NIDebugger">NonIntrusive Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.Process" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000005.html" LinkGroup="NIDebugger">Process Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.ReadDWORD" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000013.html" LinkGroup="NIDebugger">ReadDWORD Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.ReadData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000000C.html" LinkGroup="NIDebugger">ReadData Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.ReadStackValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000015.html" LinkGroup="NIDebugger">ReadStackValue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.ReadString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000012.html" LinkGroup="NIDebugger">ReadString Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.ReadWORD" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000000B.html" LinkGroup="NIDebugger">ReadWORD Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NISearchOptions.SearchBytes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000003D.html" LinkGroup="NIDebugger">SearchBytes Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NISearchOptions.SearchImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000042.html" LinkGroup="NIDebugger">SearchImage Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.SearchMemory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000000F.html" LinkGroup="NIDebugger">SearchMemory Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NISearchOptions.SearchString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000003C.html" LinkGroup="NIDebugger">SearchString Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.SetBreakpoint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000001F.html" LinkGroup="NIDebugger">SetBreakpoint Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIContext.SetFlag" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000002E.html" LinkGroup="NIDebugger">SetFlag Method {NonIntrusive.NIContext}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.SetFlag" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000008.html" LinkGroup="NIDebugger">SetFlag Method {NonIntrusive.NIDebugger}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.SetProcBP" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000025.html" LinkGroup="NIDebugger">SetProcBP Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.SetRegister" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000000A.html" LinkGroup="NIDebugger">SetRegister Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.SingleStep" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000024_overloads--.html" LinkGroup="NIDebugger">SingleStep Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.SingleStep" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000023_overloads--.html" LinkGroup="NIDebugger">SingleStep Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NISearchOptions.StartAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000003F.html" LinkGroup="NIDebugger">StartAddress Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.Terminate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000001D.html" LinkGroup="NIDebugger">Terminate Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.Times" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000029.html" LinkGroup="NIDebugger">Times Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIContext.ToWin32Context" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000002F.html" LinkGroup="NIDebugger">ToWin32Context Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.Until" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000028.html" LinkGroup="NIDebugger">Until Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.While" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000027.html" LinkGroup="NIDebugger">While Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.Win32" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000043.html" LinkGroup="NIDebugger">Win32 Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.WriteDWORD" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000014.html" LinkGroup="NIDebugger">WriteDWORD Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.WriteData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000010.html" LinkGroup="NIDebugger">WriteData Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.WriteHexString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000000E.html" LinkGroup="NIDebugger">WriteHexString Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.WriteStackValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000016.html" LinkGroup="NIDebugger">WriteStackValue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIDebugger.WriteString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000011.html" LinkGroup="NIDebugger">WriteString Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIBreakPoint.bpAddress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000038.html" LinkGroup="NIDebugger">bpAddress Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIStartupOptions.commandLine" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000033.html" LinkGroup="NIDebugger">commandLine Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIStartupOptions.executable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000032.html" LinkGroup="NIDebugger">executable Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIStartupOptions.incrementTickCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000036.html" LinkGroup="NIDebugger">incrementTickCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="LDASM_Sharp.LDASM.ldasm" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000002.html" LinkGroup="NIDebugger">ldasm Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIBreakPoint.originalBytes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000039.html" LinkGroup="NIDebugger">originalBytes Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIStartupOptions.patchTickCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000035.html" LinkGroup="NIDebugger">patchTickCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIStartupOptions.resumeOnCreate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_0000000000000034.html" LinkGroup="NIDebugger">resumeOnCreate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="NonIntrusive.NIBreakPoint.threadId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:NIDebugger.chm::/topic_000000000000003A.html" LinkGroup="NIDebugger">threadId Property</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

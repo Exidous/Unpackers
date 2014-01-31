@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Reference</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<script src="search.js" type="text/javascript"></script>
+	<script type="text/javascript">
+<!--
+
+function CreateFrames() {
+	var rightPage = "title--.html";
+	var leftPage = "switch1--.html";
+	
+	if (location.search != "") {
+		rightPage = location.search.substring(1);
+	} else if (location.hash != "") {
+		rightPage = location.hash.substring(1);
+	}
+	
+	try {
+		leftPage = frames["vbdocswitch"].src;
+	} catch (ex) {}
+	
+	document.write('<frameset rows="*" cols="30%, *" frameborder="1" framespacing="3" bordercolor="#e9e8dc">');
+	document.write('<frame name="vbdocswitch" scrolling="NO" src="' + leftPage + '" frameborder="0" >');
+	document.write('<frame src="' + rightPage + '" name="vbdocright" onload="do_highlight()">');
+	document.write('</frameset>');
+}
+
+
+function redirectFrame() {
+	if (location.search != "") {
+		frames["vbdocright"].location.replace(location.search.substring(1));
+	} else if (location.hash != "") {
+		frames["vbdocright"].location.replace(location.hash.substring(1));
+	}
+}
+
+CreateFrames();
+window.onhashchange = redirectFrame;
+
+//-->
+	</script>	
+</head>
+<noscript>
+	<frameset rows="*" cols="30%, *" frameborder="1" framespacing="3" bordercolor="#e9e8dc">
+	  <frame name="vbdocswitch" scrolling="NO" src="switch1--.html" frameborder="0" >
+	  <frame src="title--.html" name="vbdocright" onload="do_highlight()">
+
+		<noframes>
+		<body bgcolor="#FFFFFF">
+			This page requires frames.
+		</body>
+		</noframes>
+
+	</frameset>
+</noscript> 
+</html>
