@@ -1,8 +1,8 @@
 ﻿
 Public Class Unpacker
 
-    Dim debugger As New NonIntrusive.NIDebugger()
-    Public Sub UnpackePE(path As String)
+    Private Shared debugger As New NonIntrusive.NIDebugger()
+    Public Shared Sub UnpackePE(path As String)
         Dim opts As New NonIntrusive.NIStartupOptions()
         opts.executable = path
         opts.resumeOnCreate = False
@@ -54,7 +54,7 @@ Public Class Unpacker
 
     End Sub
 
-    Public Function FoundJMP()
+    Private Shared Function FoundJMP()
         If debugger.Context.Eip > &H405240 Then
             Dim i As Integer = 0
         End If

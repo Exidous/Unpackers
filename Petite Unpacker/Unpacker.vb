@@ -1,14 +1,14 @@
 ﻿Imports System.Runtime.InteropServices
 
 Public Class Unpacker
-    Dim debugger As New NonIntrusive.NIDebugger()
+    Private Shared debugger As New NonIntrusive.NIDebugger()
 
     <DllImport("ARImpRec.dll", CallingConvention:=CallingConvention.StdCall, EntryPoint:="SearchAndRebuildImports@28", CharSet:=CharSet.Ansi)> _
     Public Shared Function SearchAndRebuildImports(IRProcessId As UInteger, IRNameOfDumped As String, IROEP As UInt32, IRSaveOEPToFile As UInt32, ByRef IRIATRVA As UInt32, ByRef IRIATSize As UInt32, _
     IRWarning As IntPtr) As UInteger
     End Function
 
-    Public Sub UnpackePetite(path As String)
+    Public Shared Function UnpackePetite(path As String)
         Dim SO As New NonIntrusive.NIStartupOptions
 
         With SO
@@ -84,7 +84,7 @@ Public Class Unpacker
             .Detach()
             .Terminate()
         End With
-    End Sub
+    End Function
 
    
 End Class
