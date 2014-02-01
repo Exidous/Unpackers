@@ -26,12 +26,13 @@
             Else
                 If Paker = "Mpress" Then Mpress_Unpacker.Unpacker.UnpackMpress(OpenFileDialog1.FileName)
                 If Paker = "PeCompact" Then PECompactUnpacker.Unpacker.UnpackePE(OpenFileDialog1.FileName)
-                If Paker = "UPX" Then Application.DoEvents()
+                If Paker = "UPX" Then UPX_Unpacker.ClsUnpacker.UnpackUPX(OpenFileDialog1.FileName)
                 If Paker = "FSG" Then FSG_Unpacker.ClsUnpacker.UnpackFSG(OpenFileDialog1.FileName)
-                If Paker = "AsPack" Then Application.DoEvents()
+                If Paker = "AsPack" Then AsPack_Unpacker.ClsUnpacker.UnpackAsPack(OpenFileDialog1.FileName)
                 If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OpenFileDialog1.FileName)
+
+                Debugger.Detach.Terminate()
             End If
-            Debugger.Detach.Terminate()
         End If
     End Sub
 
