@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SuspendLayout()
         '
         'Button1
@@ -44,6 +45,10 @@ Partial Class Form1
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Supports: AsPack, PeCompact, UPX, Mpress, FSG && Petite"
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -59,5 +64,6 @@ Partial Class Form1
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
 
 End Class

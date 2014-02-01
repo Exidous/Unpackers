@@ -2,34 +2,34 @@
     Dim Debugger As New NonIntrusive.NIDebugger
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim OFD As New OpenFileDialog
+
         Dim Sto As New NonIntrusive.NIStartupOptions
 
 
-        With OFD
+        With OpenFileDialog1
             .Title = "Select Packed .exe"
             .FileName = ""
             .ShowDialog()
         End With
-        If OFD.FileName <> "" Then
+        If OpenFileDialog1.FileName <> "" Then
             With Sto
                 .commandLine = ""
-                .executable = OFD.FileName
+                .executable = OpenFileDialog1.FileName
                 .resumeOnCreate = False
             End With
             With Debugger
                 .Execute(Sto)
             End With
-            Dim Paker As String = CheckPacker(OFD.FileName)
+            Dim Paker As String = CheckPacker(OpenFileDialog1.FileName)
             If Paker = "NotFound" Then
                 MsgBox("Packer not detected! cannot continue :(")
             Else
-                If Paker = "Mpress" Then Mpress_Unpacker.Unpacker.UnpackMpress(OFD.FileName)
-                If Paker = "PeCompact" Then PECompactUnpacker.Unpacker.UnpackePE(OFD.FileName)
+                If Paker = "Mpress" Then Mpress_Unpacker.Unpacker.UnpackMpress(OpenFileDialog1.FileName)
+                If Paker = "PeCompact" Then PECompactUnpacker.Unpacker.UnpackePE(OpenFileDialog1.FileName)
                 If Paker = "UPX" Then Application.DoEvents()
-                If Paker = "FSG" Then FSG_Unpacker.ClsUnpacker.UnpackFSG(OFD.FileName)
+                If Paker = "FSG" Then FSG_Unpacker.ClsUnpacker.UnpackFSG(OpenFileDialog1.FileName)
                 If Paker = "AsPack" Then Application.DoEvents()
-                If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OFD.FileName)
+                If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OpenFileDialog1.FileName)
             End If
             Debugger.Detach.Terminate()
         End If
