@@ -24,34 +24,12 @@ Public Class Unpacker
             .Execute(SO)
             .InstallHardVEH()
             .SingleStep(5)
-            Dim BPAddr As Long = .Context.Esp
-            Dim myVal As UInteger = 0 '= 4
-
-            Dim bytess() As Byte = {}
-            .ReadData(BPAddr, 4, bytess)
-            Array.Reverse(bytess)
-            myVal = BitConverter.ToUInt32(bytess, 0)
-
-            'MsgBox(Hex(myVal))
-            'MsgBox(Hex(.Context.Eip))
-            '.InstallHardVEH()
-
             .SetHardBreakPoint(.Context.Eip, NonIntrusive.HWBP_MODE.MODE_LOCAL, NonIntrusive.HWBP_TYPE.TYPE_READWRITE, NonIntrusive.HWBP_SIZE.SIZE_4)
             .Continue()
-
-            '.ClearBreakpoint(.har
-            '  MsgBox(.LastBreak.Context.Eip.ToString("X8"))
-            'add the hardware bp == myVal
-            'single step 2 times
-            'we are at oep
-            'dump process & rebuild Imports :D
-
             Dim NewEP As UInteger
-            'NewEP = debugger.Context.Eip - debugger.Process.MainModule.BaseAddress
             NewEP = debugger.LastBreak.BreakAddress - debugger.Process.MainModule.BaseAddress
             .SetBreakpoint(debugger.LastBreak.BreakAddress + debugger.GetInstrLength())
             .Continue()
-            ' .SetBreakpoint(.Context.Eip + .GetInstrLength)
             .SetHardBreakPoint(.Context.Eip + .GetInstrLength, NonIntrusive.HWBP_MODE.MODE_LOCAL, NonIntrusive.HWBP_TYPE.TYPE_EXECUTE, NonIntrusive.HWBP_SIZE.SIZE_1)
 Again:
             .Continue()
@@ -60,11 +38,8 @@ Again:
             .Continue()
             If .Context.Eax = &H0 Then
                 .SingleStep()
-                '  .RemoveHardBreakPoint(JmpAddr)
-                ' .SetHardBreakPoint(JmpAddr, NonIntrusive.HWBP_MODE.MODE_LOCAL, NonIntrusive.HWBP_TYPE.TYPE_EXECUTE, NonIntrusive.HWBP_SIZE.SIZE_1)
                 GoTo Again
             Else
-                '   MsgBox(Hex(.Context.Eax))
                 .SingleStep()
                 Dim SEArchOpts As New NonIntrusive.NISearchOptions
                 With SEArchOpts
@@ -75,17 +50,14 @@ Again:
                 Dim Lst() As UInteger = {}
                 .SearchMemory(SEArchOpts, Lst)
                 If Lst.Length > 0 Then
-                    '.SetBreakpoint(Lst(0) + &HA)
                     .SetHardBreakPoint(Lst(0) + &HA, NonIntrusive.HWBP_MODE.MODE_LOCAL, NonIntrusive.HWBP_TYPE.TYPE_EXECUTE, NonIntrusive.HWBP_SIZE.SIZE_1)
                     .Continue()
                     .SetBreakpoint(.LastBreak.BreakAddress)
                     .Continue()
                     .SingleStep()
-
                 Else
                     Exit Sub
                 End If
-
             End If
             NewEP = .Context.Eip - .Process.MainModule.BaseAddress
             Clipboard.Clear()

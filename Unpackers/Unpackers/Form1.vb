@@ -2,9 +2,7 @@
     Dim Debugger As New NonIntrusive.NIDebugger
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
         Dim Sto As New NonIntrusive.NIStartupOptions
-
 
         With OpenFileDialog1
             .Title = "Select Packed .exe"
@@ -21,6 +19,7 @@
                 .Execute(Sto)
             End With
             Dim Paker As String = CheckPacker(OpenFileDialog1.FileName)
+            Debugger.Detach.Terminate()
             If Paker = "NotFound" Then
                 MsgBox("Packer not detected! cannot continue :(")
             Else
@@ -30,9 +29,9 @@
                 If Paker = "FSG" Then FSG_Unpacker.ClsUnpacker.UnpackFSG(OpenFileDialog1.FileName)
                 If Paker = "AsPack" Then AsPack_Unpacker.ClsUnpacker.UnpackAsPack(OpenFileDialog1.FileName)
                 If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OpenFileDialog1.FileName)
-
-                Debugger.Detach.Terminate()
             End If
+            MsgBox("Thanks bye!")
+            End
         End If
     End Sub
 
@@ -53,8 +52,6 @@
         'AsPack
         Dim sigMatch As Integer = 0
         For x As Integer = 0 To sigs.Length - 1
-            ' Dim searchPattern As [String] = sigs(x)
-            'search memory for this pattern
             Dim opts As New NonIntrusive.NISearchOptions
             opts.SearchString = sigs(x)
             opts.MaxOccurs = 1
@@ -62,18 +59,13 @@
             Dim Arran() As UInteger = {}
             Debugger.SearchMemory(opts, Arran)
             If Arran.Length > 0 Then
-                ' MsgBox(Arran(0))
                 sigMatch = x
                 Exit For
             Else
                 sigMatch = 99
             End If
-            ' if found
-            ' sigMatch = x
-            ' Exit For
         Next
-        ' determine which packer based on sigMatch value
-        'If sigMatch = -1 Then 
+        
         If sigMatch = 4 Then Return "Mpress"
         If sigMatch = 1 Then Return "PeCompact"
         If sigMatch = 0 Then Return "UPX"
