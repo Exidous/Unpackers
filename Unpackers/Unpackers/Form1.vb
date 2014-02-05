@@ -29,6 +29,7 @@
                 If Paker = "FSG" Then FSG_Unpacker.ClsUnpacker.UnpackFSG(OpenFileDialog1.FileName)
                 If Paker = "AsPack" Then AsPack_Unpacker.ClsUnpacker.UnpackAsPack(OpenFileDialog1.FileName)
                 If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OpenFileDialog1.FileName)
+                If Paker = "EZIP" Then EZIP_Unpacker.ClsUnpacker.UnpackEZIP(OpenFileDialog1.FileName)
             End If
             MsgBox("Thanks bye!")
             End
@@ -37,7 +38,7 @@
 
 
     Function CheckPacker(ByRef TheFile As String)
-        Dim sigs As [String]() = New [String](5) {}
+        Dim sigs As [String]() = New [String](6) {}
         sigs(0) = "60BE??????008DBE??????FF"
         ' UPX
         sigs(1) = "B8????????5064FF35000000006489250000000033C08908504543"
@@ -50,6 +51,7 @@
         'Mpress
         sigs(5) = "60E803000000E9EB045D4555C3E801"
         'AsPack
+        sigs(6) = "E919320000E97C2A0000E919240000E9FF230000E91E2E0000E9882E0000E92C"
         Dim sigMatch As Integer = 0
         For x As Integer = 0 To sigs.Length - 1
             Dim opts As New NonIntrusive.NISearchOptions
@@ -72,6 +74,7 @@
         If sigMatch = 3 Then Return "FSG"
         If sigMatch = 5 Then Return "AsPack"
         If sigMatch = 2 Then Return "PeTite"
+        If sigMatch = 6 Then Return "EZIP"
         Return "NotFound"
 
     End Function

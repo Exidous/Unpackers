@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{494388AB-CDB8-49B2-85FB-527A949DAC39}</ProjectGuid>
+    <ProjectGuid>{52E2D913-4428-4C5D-9F3F-D164DCB6D6A6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Unpackers.My.MyApplication</StartupObject>
-    <RootNamespace>Unpackers</RootNamespace>
-    <AssemblyName>Universal Unpacker Team-REPT</AssemblyName>
+    <StartupObject>EZIP_Unpacker.My.MyApplication</StartupObject>
+    <RootNamespace>EZIP_Unpacker</RootNamespace>
+    <AssemblyName>EZIP Unpacker</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Universal Unpacker Team-REPT.xml</DocumentationFile>
+    <DocumentationFile>EZIP Unpacker.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Universal Unpacker Team-REPT.xml</DocumentationFile>
+    <DocumentationFile>EZIP Unpacker.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -71,6 +71,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsUnpacker.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -118,41 +119,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\EZIP Unpacker\EZIP Unpacker.vbproj">
-      <Project>{52e2d913-4428-4c5d-9f3f-d164dcb6d6a6}</Project>
-      <Name>EZIP Unpacker</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\FSG Unpacker\FSG Unpacker.vbproj">
-      <Project>{22bbe6a8-8ea3-4600-893f-0147ddbc394b}</Project>
-      <Name>FSG Unpacker</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ImportReconstruction\ImportReconstruction.vbproj">
+    <ProjectReference Include="..\ImportReconstruction\ImportReconstruction.vbproj">
       <Project>{ebff22cc-5122-4291-87f2-0777d12a7f86}</Project>
       <Name>ImportReconstruction</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Mpress Unpacker\Mpress Unpacker.vbproj">
-      <Project>{d8529f65-032f-4d8a-828e-40b6d2c99520}</Project>
-      <Name>Mpress Unpacker</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\NIDebugger\NIDebugger.csproj">
+    <ProjectReference Include="..\NIDebugger\NIDebugger.csproj">
       <Project>{fdb20eb3-5e0e-48df-9364-299c7f9aafc8}</Project>
       <Name>NIDebugger</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PECompactUnpacker\PECompactUnpacker.vbproj">
-      <Project>{0f5df81b-75f4-42ec-bc30-4e338cf4e7bd}</Project>
-      <Name>PECompactUnpacker</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Petite Unpacker\Petite Unpacker.vbproj">
-      <Project>{009f2c8c-c7a0-4dd2-8a5e-475beb9a5c99}</Project>
-      <Name>Petite Unpacker</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\UPX Unpacker\UPX Unpacker.vbproj">
-      <Project>{a2cad687-85fd-4e43-9735-3b1982138269}</Project>
-      <Name>UPX Unpacker</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AsPack Unpacker\AsPack Unpacker.vbproj">
-      <Project>{00e2f751-ee21-4587-bb6e-f4cceb95807e}</Project>
-      <Name>AsPack Unpacker</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

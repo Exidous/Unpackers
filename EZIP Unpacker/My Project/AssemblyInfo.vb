@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Unpackers")> 
+<Assembly: AssemblyTitle("EZIP Unpacker")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Unpackers")> 
-<Assembly: AssemblyCopyright("Copyright © Exidous 2014")> 
+<Assembly: AssemblyProduct("EZIP Unpacker")> 
+<Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("c5b576df-eaa1-4767-9ba8-142e08eed340")> 
+<Assembly: Guid("6dfef66a-1713-443b-8f68-a57580218cae")> 
 
 ' Version information for an assembly consists of the following four values:
 '
