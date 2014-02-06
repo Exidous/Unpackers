@@ -23,6 +23,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AsPack Unpacker", "AsPack U
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EZIP Unpacker", "..\EZIP Unpacker\EZIP Unpacker.vbproj", "{52E2D913-4428-4C5D-9F3F-D164DCB6D6A6}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NeoLite Unpacker", "..\NeoLite Unpacker\NeoLite Unpacker.vbproj", "{9A8A3B6C-A991-4A51-AAAA-3933017667BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{52E2D913-4428-4C5D-9F3F-D164DCB6D6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52E2D913-4428-4C5D-9F3F-D164DCB6D6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52E2D913-4428-4C5D-9F3F-D164DCB6D6A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8A3B6C-A991-4A51-AAAA-3933017667BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8A3B6C-A991-4A51-AAAA-3933017667BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8A3B6C-A991-4A51-AAAA-3933017667BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8A3B6C-A991-4A51-AAAA-3933017667BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

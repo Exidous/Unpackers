@@ -30,6 +30,7 @@
                 If Paker = "AsPack" Then AsPack_Unpacker.ClsUnpacker.UnpackAsPack(OpenFileDialog1.FileName)
                 If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OpenFileDialog1.FileName)
                 If Paker = "EZIP" Then EZIP_Unpacker.ClsUnpacker.UnpackEZIP(OpenFileDialog1.FileName)
+                If Paker = "NeoLite" Then NeoLite_Unpacker.ClsUnpacker.UnpackNeoLite(OpenFileDialog1.FileName)
             End If
             MsgBox("Thanks bye!")
             End
@@ -52,6 +53,9 @@
         sigs(5) = "60E803000000E9EB045D4555C3E801"
         'AsPack
         sigs(6) = "E919320000E97C2A0000E919240000E9FF230000E91E2E0000E9882E0000E92C"
+        'Ezip
+        sigs(7) = "E9A6000000"
+        'NeoLite
         Dim sigMatch As Integer = 0
         For x As Integer = 0 To sigs.Length - 1
             Dim opts As New NonIntrusive.NISearchOptions
@@ -75,6 +79,7 @@
         If sigMatch = 5 Then Return "AsPack"
         If sigMatch = 2 Then Return "PeTite"
         If sigMatch = 6 Then Return "EZIP"
+        If sigMatch = 7 Then Return "NeoLite"
         Return "NotFound"
 
     End Function
