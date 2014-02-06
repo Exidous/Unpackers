@@ -39,7 +39,7 @@
 
 
     Function CheckPacker(ByRef TheFile As String)
-        Dim sigs As [String]() = New [String](6) {}
+        Dim sigs As [String]() = New [String](7) {}
         sigs(0) = "60BE??????008DBE??????FF"
         ' UPX
         sigs(1) = "B8????????5064FF35000000006489250000000033C08908504543"
