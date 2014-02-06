@@ -31,6 +31,7 @@
                 If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OpenFileDialog1.FileName)
                 If Paker = "EZIP" Then EZIP_Unpacker.ClsUnpacker.UnpackEZIP(OpenFileDialog1.FileName)
                 If Paker = "NeoLite" Then NeoLite_Unpacker.ClsUnpacker.UnpackNeoLite(OpenFileDialog1.FileName)
+                If Paker = "SecuPack" Then SecuPack.ClsUnpacker.UnpackSecuPack(OpenFileDialog1.FileName)
             End If
             MsgBox("Thanks bye!")
             End
@@ -39,7 +40,7 @@
 
 
     Function CheckPacker(ByRef TheFile As String)
-        Dim sigs As [String]() = New [String](7) {}
+        Dim sigs As [String]() = New [String](8) {}
         sigs(0) = "60BE??????008DBE??????FF"
         ' UPX
         sigs(1) = "B8????????5064FF35000000006489250000000033C08908504543"
@@ -56,6 +57,8 @@
         'Ezip
         sigs(7) = "E9A6000000"
         'NeoLite
+        sigs(8) = "558BEC83C4F0535657"
+        'SecuPack
         Dim sigMatch As Integer = 0
         For x As Integer = 0 To sigs.Length - 1
             Dim opts As New NonIntrusive.NISearchOptions
@@ -80,6 +83,7 @@
         If sigMatch = 2 Then Return "PeTite"
         If sigMatch = 6 Then Return "EZIP"
         If sigMatch = 7 Then Return "NeoLite"
+        If sigMatch = 8 Then Return "SecuPack"
         Return "NotFound"
 
     End Function
