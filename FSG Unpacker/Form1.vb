@@ -59,7 +59,7 @@ Public Class Form1
             FileIO.FileSystem.WriteAllBytes("rept.it", My.Resources.reptinator, False)
         End If
 
-        Un4seen.Bass.BassNet.Registration("Exidous2008@gmail.com", "2X2343021152222")
+        Un4seen.Bass.BassNet.Registration("Exidous@Team-REPT.com", "2X2342821182322")
 
         If Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero) Then
             'BassNet.register("test", "test")
