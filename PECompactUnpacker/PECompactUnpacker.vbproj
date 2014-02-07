@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PECompactUnpacker.My.MyApplication</StartupObject>
     <RootNamespace>PECompactUnpacker</RootNamespace>
-    <AssemblyName>PECompactUnpacker</AssemblyName>
+    <AssemblyName>PECompact Unpacker</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>PECompactUnpacker.xml</DocumentationFile>
+    <DocumentationFile>PECompact Unpacker.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>PECompactUnpacker.xml</DocumentationFile>
+    <DocumentationFile>PECompact Unpacker.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
