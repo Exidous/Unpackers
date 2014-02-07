@@ -58,6 +58,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Multi Unpacker Team-REPT"
         Me.ResumeLayout(False)
         Me.PerformLayout()

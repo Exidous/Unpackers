@@ -46,6 +46,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(288, 81)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
