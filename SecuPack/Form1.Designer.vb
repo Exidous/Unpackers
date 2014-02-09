@@ -24,28 +24,42 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Button1
+        'Label2
         '
-        Me.Button1.Location = New System.Drawing.Point(95, 31)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Image = Global.SecuPack.My.Resources.Resources.btn_exit_1
+        Me.Label2.Location = New System.Drawing.Point(358, 4)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(27, 26)
+        Me.Label2.TabIndex = 12
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Image = Global.SecuPack.My.Resources.Resources.btn_big_unpk_1
+        Me.Label1.Location = New System.Drawing.Point(117, 58)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(175, 42)
+        Me.Label1.TabIndex = 11
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(269, 88)
-        Me.Controls.Add(Me.Button1)
+        Me.BackgroundImage = Global.SecuPack.My.Resources.Resources.SecuPack
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(391, 127)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -54,6 +68,7 @@ Partial Class Form1
 
     End Sub
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class

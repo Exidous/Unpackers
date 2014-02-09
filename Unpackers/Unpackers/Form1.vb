@@ -33,44 +33,6 @@ Public Class Form1
             temp = Nothing
         End If
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        Dim Sto As New NonIntrusive.NIStartupOptions
-
-        With OpenFileDialog1
-            .Title = "Select Packed .exe"
-            .FileName = ""
-            .ShowDialog()
-        End With
-        If OpenFileDialog1.FileName <> "" Then
-            With Sto
-                .commandLine = ""
-                .executable = OpenFileDialog1.FileName
-                .resumeOnCreate = False
-            End With
-            With Debugger
-                .Execute(Sto)
-            End With
-            Dim Paker As String = CheckPacker(OpenFileDialog1.FileName)
-            Debugger.Detach.Terminate()
-            If Paker = "NotFound" Then
-                MsgBox("Packer not detected! cannot continue :(")
-            Else
-                If Paker = "Mpress" Then Mpress_Unpacker.Unpacker.UnpackMpress(OpenFileDialog1.FileName)
-                If Paker = "PeCompact" Then PECompactUnpacker.Unpacker.UnpackePE(OpenFileDialog1.FileName)
-                If Paker = "UPX" Then UPX_Unpacker.ClsUnpacker.UnpackUPX(OpenFileDialog1.FileName)
-                If Paker = "FSG" Then FSG_Unpacker.ClsUnpacker.UnpackFSG(OpenFileDialog1.FileName)
-                If Paker = "AsPack" Then AsPack_Unpacker.ClsUnpacker.UnpackAsPack(OpenFileDialog1.FileName)
-                If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OpenFileDialog1.FileName)
-                If Paker = "EZIP" Then EZIP_Unpacker.ClsUnpacker.UnpackEZIP(OpenFileDialog1.FileName)
-                If Paker = "NeoLite" Then NeoLite_Unpacker.ClsUnpacker.UnpackNeoLite(OpenFileDialog1.FileName)
-                If Paker = "SecuPack" Then SecuPack.ClsUnpacker.UnpackSecuPack(OpenFileDialog1.FileName)
-            End If
-            MsgBox("Thanks bye!")
-            End
-        End If
-    End Sub
-
 
     Function CheckPacker(ByRef TheFile As String)
         Dim sigs As [String]() = New [String](8) {}
@@ -152,7 +114,22 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Form1_DragDrop(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles Me.DragDrop
+        Dim files() As String = e.Data.GetData(DataFormats.FileDrop)
+        For Each path In files
+            Unpak(path)
+            Exit For
+        Next
+    End Sub
+
+    Private Sub Form1_DragEnter(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles Me.DragEnter
+        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+            e.Effect = DragDropEffects.Copy
+        End If
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.AllowDrop = True
+        Me.TopMost = True
         If FileIO.FileSystem.FileExists("bass.dll") Then
         Else
             FileIO.FileSystem.WriteAllBytes("bass.dll", My.Resources.bass, False)
@@ -175,6 +152,90 @@ Public Class Form1
                 Bass.BASS_ChannelPlay(stream, True)
             End If
         End If
+    End Sub
+
+    Sub unpak(Optional Path As String = "")
+        Dim Sto As New NonIntrusive.NIStartupOptions
+        If Path = "" Then
+            With OpenFileDialog1
+                .Title = "Select Packed .exe"
+                .FileName = ""
+                .ShowDialog()
+            End With
+        Else
+            OpenFileDialog1.FileName = Path
+        End If
+        If OpenFileDialog1.FileName <> "" Then
+            With Sto
+                .commandLine = ""
+                .executable = OpenFileDialog1.FileName
+                .resumeOnCreate = False
+            End With
+            With Debugger
+                .Execute(Sto)
+            End With
+            Dim Paker As String = CheckPacker(OpenFileDialog1.FileName)
+            Debugger.Detach.Terminate()
+            If Paker = "NotFound" Then
+                Me.TopMost = False
+                MsgBox("Packer not detected! cannot continue :(")
+            Else
+                Me.TopMost = False
+                If Paker = "Mpress" Then Mpress_Unpacker.Unpacker.UnpackMpress(OpenFileDialog1.FileName)
+                If Paker = "PeCompact" Then PECompactUnpacker.Unpacker.UnpackePE(OpenFileDialog1.FileName)
+                If Paker = "UPX" Then UPX_Unpacker.ClsUnpacker.UnpackUPX(OpenFileDialog1.FileName)
+                If Paker = "FSG" Then FSG_Unpacker.ClsUnpacker.UnpackFSG(OpenFileDialog1.FileName)
+                If Paker = "AsPack" Then AsPack_Unpacker.ClsUnpacker.UnpackAsPack(OpenFileDialog1.FileName)
+                If Paker = "PeTite" Then Petite_Unpacker.Unpacker.UnpackePetite(OpenFileDialog1.FileName)
+                If Paker = "EZIP" Then EZIP_Unpacker.ClsUnpacker.UnpackEZIP(OpenFileDialog1.FileName)
+                If Paker = "NeoLite" Then NeoLite_Unpacker.ClsUnpacker.UnpackNeoLite(OpenFileDialog1.FileName)
+                If Paker = "SecuPack" Then SecuPack.ClsUnpacker.UnpackSecuPack(OpenFileDialog1.FileName)
+            End If
+            MsgBox("Thanks bye!")
+            End
+        End If
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Unpak()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        End
+    End Sub
+
+    Private Sub Label1_MouseDown(sender As Object, e As MouseEventArgs) Handles Label1.MouseDown
+        Label1.Image = My.Resources.btn_big_unpk_3
+    End Sub
+
+
+    Private Sub Label1_MouseHover(sender As Object, e As EventArgs) Handles Label1.MouseHover
+        Label1.Image = My.Resources.btn_big_unpk_2
+    End Sub
+
+    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave
+        Label1.Image = My.Resources.btn_big_unpk_1
+    End Sub
+
+    Private Sub Label1_MouseUp(sender As Object, e As MouseEventArgs) Handles Label1.MouseUp
+        Label1.Image = My.Resources.btn_big_unpk_1
+    End Sub
+
+    Private Sub Label2_MouseDown(sender As Object, e As MouseEventArgs) Handles Label2.MouseDown
+        Label2.Image = My.Resources.btn_exit_3
+    End Sub
+
+
+    Private Sub Label2_MouseHover(sender As Object, e As EventArgs) Handles Label2.MouseHover
+        Label2.Image = My.Resources.btn_exit_2
+    End Sub
+
+    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Label2.MouseLeave
+        Label2.Image = My.Resources.btn_exit_1
+    End Sub
+
+    Private Sub Label2_MouseUp(sender As Object, e As MouseEventArgs) Handles Label2.MouseUp
+        Label2.Image = My.Resources.btn_big_unpk_1
     End Sub
 End Class
 

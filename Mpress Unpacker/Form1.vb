@@ -32,17 +32,7 @@ Public Class Form1
             temp = Nothing
         End If
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        With OpenFileDialog1
-            .Title = "Select program protected with Mpress"
-            .FileName = ""
-            .ShowDialog()
-        End With
-
-        If OpenFileDialog1.FileName <> "" Then Call Unpacker.UnpackMpress(OpenFileDialog1.FileName)
-
-
-    End Sub
+   
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Bass.BASS_StreamFree(stream)
@@ -75,7 +65,22 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Form1_DragDrop(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles Me.DragDrop
+        Dim files() As String = e.Data.GetData(DataFormats.FileDrop)
+        For Each path In files
+            unpak(path)
+            Exit For
+        Next
+    End Sub
+
+    Private Sub Form1_DragEnter(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles Me.DragEnter
+        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+            e.Effect = DragDropEffects.Copy
+        End If
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.AllowDrop = True
+        Me.TopMost = True
         If FileIO.FileSystem.FileExists("bass.dll") Then
         Else
             FileIO.FileSystem.WriteAllBytes("bass.dll", My.Resources.bass, False)
@@ -100,5 +105,59 @@ Public Class Form1
                 Bass.BASS_ChannelPlay(stream, True)
             End If
         End If
+    End Sub
+
+    Sub unpak(Optional FileName As String = "")
+        If FileName = "" Then
+            With OpenFileDialog1
+                .Title = "Select program protected with Mpress"
+                .FileName = ""
+                .ShowDialog()
+            End With
+        Else
+            OpenFileDialog1.FileName = FileName
+        End If
+         If OpenFileDialog1.FileName <> "" Then Call Unpacker.UnpackMpress(OpenFileDialog1.FileName)
+    End Sub
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Call unpak()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        End
+    End Sub
+
+    Private Sub Label1_MouseDown(sender As Object, e As MouseEventArgs) Handles Label1.MouseDown
+        Label1.Image = My.Resources.btn_big_unpk_3
+    End Sub
+
+
+    Private Sub Label1_MouseHover(sender As Object, e As EventArgs) Handles Label1.MouseHover
+        Label1.Image = My.Resources.btn_big_unpk_2
+    End Sub
+
+    Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave
+        Label1.Image = My.Resources.btn_big_unpk_1
+    End Sub
+
+    Private Sub Label1_MouseUp(sender As Object, e As MouseEventArgs) Handles Label1.MouseUp
+        Label1.Image = My.Resources.btn_big_unpk_1
+    End Sub
+
+    Private Sub Label2_MouseDown(sender As Object, e As MouseEventArgs) Handles Label2.MouseDown
+        Label2.Image = My.Resources.btn_exit_3
+    End Sub
+
+
+    Private Sub Label2_MouseHover(sender As Object, e As EventArgs) Handles Label2.MouseHover
+        Label2.Image = My.Resources.btn_exit_2
+    End Sub
+
+    Private Sub Label2_MouseLeave(sender As Object, e As EventArgs) Handles Label2.MouseLeave
+        Label2.Image = My.Resources.btn_exit_1
+    End Sub
+
+    Private Sub Label2_MouseUp(sender As Object, e As MouseEventArgs) Handles Label2.MouseUp
+        Label2.Image = My.Resources.btn_big_unpk_1
     End Sub
 End Class

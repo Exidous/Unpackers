@@ -144,6 +144,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="4247716.ico" />
+    <None Include="Resources\UPX.bmp" />
+    <None Include="Resources\btn exit 3.bmp" />
+    <None Include="Resources\btn exit 2.bmp" />
+    <None Include="Resources\btn exit 1.bmp" />
+    <None Include="Resources\btn big unpk 3.bmp" />
+    <None Include="Resources\btn big unpk 2.bmp" />
+    <None Include="Resources\btn big unpk 1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
