@@ -25,7 +25,7 @@
             If lst.Length > 0 Then
                 .SetBreakpoint(lst(0))
                 .Continue()
-                .SingleStep(4)
+                .SingleStep(3)
                 Dim NEWEP As UInteger = Debugger.Context.Eip - Debugger.Process.MainModule.BaseAddress
                 With DumpOpts
                     .EntryPoint = NEWEP
