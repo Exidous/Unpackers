@@ -141,22 +141,22 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property final() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("final", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
         Friend ReadOnly Property reptinator() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("reptinator", resourceCulture)
                 Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property WIN() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("WIN", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
     End Module

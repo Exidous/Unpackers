@@ -145,7 +145,7 @@
   <data name="bass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\BASSDLL\bass.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\final.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WIN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WIN.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

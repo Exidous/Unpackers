@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="rept.ico" />
+    <None Include="Resources\WIN.bmp" />
     <None Include="Resources\final.bmp" />
     <None Include="Resources\btn exit 3.bmp" />
     <None Include="Resources\btn exit 2.bmp" />

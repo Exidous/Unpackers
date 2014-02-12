@@ -54,7 +54,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Unpackers.My.Resources.Resources.final
+        Me.BackgroundImage = Global.Unpackers.My.Resources.Resources.WIN
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(569, 175)
         Me.Controls.Add(Me.Label2)
