@@ -22,53 +22,48 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.SuspendLayout()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SuspendLayout
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Image = Global.cEXE_Unpacker.My.Resources.Resources.btn_exit_1
+        Me.Label2.Location = New System.Drawing.Point(293, 6)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(27, 26)
+        Me.Label2.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Image = Global.cEXE_Unpacker.My.Resources.Resources.btn_big_unpk_1
+        Me.Label1.Location = New System.Drawing.Point(90, 53)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(175, 42)
+        Me.Label1.TabIndex = 3
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Image = Global.Unpackers.My.Resources.Resources.btn_exit_1
-        Me.Label2.Location = New System.Drawing.Point(538, 4)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(27, 26)
-        Me.Label2.TabIndex = 16
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Image = Global.Unpackers.My.Resources.Resources.btn_big_unpk_1
-        Me.Label1.Location = New System.Drawing.Point(195, 113)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(175, 42)
-        Me.Label1.TabIndex = 15
-        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Unpackers.My.Resources.Resources.final
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(569, 175)
+        Me.ClientSize = New System.Drawing.Size(327, 158)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Multi Unpacker Team-REPT"
-        Me.ResumeLayout(False)
+        Me.Text = "Form1"
+        Me.ResumeLayout(false)
 
-    End Sub
-    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+End Sub
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
 
 End Class

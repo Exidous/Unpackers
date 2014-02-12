@@ -118,14 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bass.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Bass_Net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\BASSDLL\Bass.Net.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\Bass.Net.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_big_unpk_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn big unpk 1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_big_unpk_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn big unpk 2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_exit_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn exit 2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_big_unpk_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn big unpk 3.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,19 +136,13 @@
   <data name="btn_exit_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn exit 1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn_exit_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn exit 2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn_exit_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn exit 3.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_big_unpk_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn big unpk 1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="reptinator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\BASSDLL\reptinator.it;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="bass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\BASSDLL\bass.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\final.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\reptinator.it;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
