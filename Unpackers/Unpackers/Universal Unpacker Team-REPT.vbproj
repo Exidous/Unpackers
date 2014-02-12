@@ -126,6 +126,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\cEXE Unpacker\cEXE Unpacker.vbproj">
+      <Project>{c5356452-f4d4-4349-97cb-81622ae8db8d}</Project>
+      <Name>cEXE Unpacker</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\EZIP Unpacker\EZIP Unpacker.vbproj">
       <Project>{52e2d913-4428-4c5d-9f3f-d164dcb6d6a6}</Project>
       <Name>EZIP Unpacker</Name>

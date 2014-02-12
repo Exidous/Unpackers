@@ -35,7 +35,7 @@ Public Class Form1
     End Sub
 
     Function CheckPacker(ByRef TheFile As String)
-        Dim sigs As [String]() = New [String](8) {}
+        Dim sigs As [String]() = New [String](9) {}
         sigs(0) = "60BE??????008DBE??????FF"
         ' UPX
         sigs(1) = "B8????????5064FF35000000006489250000000033C08908504543"
@@ -54,6 +54,8 @@ Public Class Form1
         'NeoLite
         sigs(8) = "558BEC83C4F0535657"
         'SecuPack
+        sigs(9) = "558BEC81EC0C02????56BE0401????8D85F8FEFFFF56506A??FF15541040??8A8DF8FEFFFF33D284C98D85F8FEFFFF7416"
+        'cEXE
         Dim sigMatch As Integer = 0
         For x As Integer = 0 To sigs.Length - 1
             Dim opts As New NonIntrusive.NISearchOptions
@@ -79,6 +81,7 @@ Public Class Form1
         If sigMatch = 6 Then Return "EZIP"
         If sigMatch = 7 Then Return "NeoLite"
         If sigMatch = 8 Then Return "SecuPack"
+        If sigMatch = 9 Then Return "cEXE"
         Return "NotFound"
 
     End Function
@@ -190,6 +193,7 @@ Public Class Form1
                 If Paker = "EZIP" Then EZIP_Unpacker.ClsUnpacker.UnpackEZIP(OpenFileDialog1.FileName)
                 If Paker = "NeoLite" Then NeoLite_Unpacker.ClsUnpacker.UnpackNeoLite(OpenFileDialog1.FileName)
                 If Paker = "SecuPack" Then SecuPack.ClsUnpacker.UnpackSecuPack(OpenFileDialog1.FileName)
+                If Paker = "cEXE" Then cEXE_Unpacker.ClsUnpacker.UnpackcEXE(OpenFileDialog1.FileName)
             End If
             MsgBox("Thanks bye!")
             End

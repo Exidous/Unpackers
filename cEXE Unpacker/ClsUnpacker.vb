@@ -22,8 +22,11 @@ TryAgain:
             Dim Fname As String = Strings.Right(TheFile, TheFile.Length - TheFile.LastIndexOf("\") - 1)
             Dim DelPath As String = Strings.Left(TheFile, TheFile.LastIndexOf("\")) & "\"
             Dim OutFile As String = Replace(TheFile, ".exe", "_unpacked.exe")
-
-            FileIO.FileSystem.CopyFile(Trim(TmpFile), Trim(OutFile))
+            Try
+                FileIO.FileSystem.CopyFile(Trim(TmpFile), Trim(OutFile))
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
             Dim Unpacked As String = OutFile
             If FileIO.FileSystem.FileExists(Unpacked) Then
                 .Detach.Terminate()
